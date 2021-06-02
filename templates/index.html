@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>loan probability</title>
+<style>
+h1 {text-align: center;}
+form {text-align: center;}
+div{text-align: center;}
+</style>
+</head>
+<body>
+ <div class="login">
+	<h1>prediction of home loan approval</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+	Gender
+        <input type="text" name="Gender" placeholder="male/female" required="required" /><br>
+<br>     married
+        <input type="text" name="married" placeholder="yes/no" required="required" /><br>
+<br>     Dependents
+	    <input type="text" name="Dependents" placeholder="no of person in family" required="required" /><br>
+<br>Eductation
+	    <input type="text" name="Eductation" placeholder="graduate/not graduate" required="required" /><br>
+<br>self_employed
+
+	    <input type="text" name="self_employed" placeholder="yes/no" required="required" /><br>
+<br>
+applicant income
+	    <input type="text" name="applicant income" placeholder="applicant income" required="required" /><br>
+<br>
+co applicant income
+	    <input type="text" name="co applicant income" placeholder="co applicant income" required="required" /><br>
+<br>loan amount
+
+	    <input type="text" name="loan amount" placeholder="loan amount" required="required" /><br>
+<br>
+loan amount term
+	    <input type="text" name="loan amount term" placeholder="loan amount term" required="required" /><br>
+<br>
+credit history
+	    <input type="text" name="credit history" placeholder="yes/no" required="required" /><br>
+
+<br>property area
+	    <input type="text" name="property area" placeholder="rural/semiurban/urban" required="required" /><br>
+<br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   {{ pred }}
+     <br>
+ </div>
+</body>
+</html>
