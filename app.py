@@ -23,7 +23,7 @@ def predict():
     if output>str(0.5):
         return render_template('index.html',pred='congrats\nProbability of getting approved {}'.format(output))
     else:
-        return render_template('index.html',pred='sorry try other university\n Probability of getting approved {}'.format(output))
+        return render_template('index.html',pred='sorry\n Probability of getting approved {}'.format(output))
 
 
 if __name__ == "__main__":
